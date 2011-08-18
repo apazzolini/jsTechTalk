@@ -1,7 +1,7 @@
 This is a Play! Framework application
 
 To run it:
-	Download Play! from http://www.playframework.org/download and install it locally.
+	Download Play! from http://www.playframework.org/download and install (extract) it locally.
 	Eclipsify the project by running 'play eclipsify /path/to/jsTechTalk'
 	Import the project into Eclipse
 	Expand the eclipse folder, right click on techtalk.launch, run as techtalk
