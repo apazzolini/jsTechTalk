@@ -2,7 +2,7 @@ This is a Play! Framework application
 
 To run it:
   Clone this git repository
-	Download Play! from http://www.playframework.org/download and install (extract) it locally.
+  Download Play! from http://www.playframework.org/download and install (extract) it locally.
   Run "play run /path/to/clonedRepository"
   Connect to http://localhost:9000 to view it
 	
