@@ -1,0 +1,44 @@
+#{extends 'main.html' /}
+#{set tab:'basicJavaScript' /}
+
+#{box 
+	id: 'basicJs1',
+	next: 'basicJs2',
+	title:'Everything is an object', 
+	jsFile:'basicJavaScript.js', 
+	links: [
+		'printMessage(message);',
+		'printMessage(Car.year);',
+		'printMessage(Car.year + " " + Car.make + " " + Car.model);',
+		'Car.drive();'
+	],
+/}
+
+#{box 
+	id: 'basicJs2',
+	defaultHidden: true,
+	previous: 'basicJs1',
+	next: 'basicJs3',
+	title:'Passing Functions', 
+	jsFile:'advancedJavaScript.js', 
+	links: [
+		"functionWrapper(sampleFn1);",
+		"functionWrapper(sampleFn2);",
+		"functionWrapper(function() { return \"I'm an inline function!\"; });",
+	]
+/}
+
+#{box 
+	id: 'basicJs3',
+	defaultHidden: true,
+	previous: 'basicJs2',
+	title:'Variable Search Scope', 
+	jsFile:'advancedJavaScript2.js', 
+	links: [
+		"alert(sampleVar1);",
+		"sampleFn3(); alert(sampleVar1);",
+		"sampleFn4(); alert(sampleVar1);",
+		"sampleFn5(); alert(sampleVar2);",
+		"sampleFn6(); alert(typeof sampleVar3 == 'undefined');"
+	]
+/}

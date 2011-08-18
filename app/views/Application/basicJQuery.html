@@ -1,0 +1,24 @@
+#{extends 'main.html' /}
+#{set tab:'basicJQuery' /}
+
+#{box 
+	title:'jQuery enables easy (and fast!) DOM manipulation', 
+	links: [
+		"alert(\$('#sampleDiv1').html());",
+		"\$('#sampleDiv1').html('Hello');",
+		"\$('#sampleDiv1').append(' World');",
+		"\$('#sampleDiv1').css('font-weight', 'bold');",
+		"\$('#sampleDiv1').toggle();",
+		"\$('#sampleDiv2').before(\$('#sampleDiv3'));",
+		"\$('.sampleDivClass').fadeToggle();",
+		"\$('.sampleDivClass').slideDown();"
+	]
+/}
+
+<div id="sampleDiv1" class="sampleDiv blue">I am a div with ID 'sampleDiv1'</div>
+<div id="sampleDiv2" class="sampleDivClass green">I am a div with id 'sampleDiv2' and class 'sampleDivClass' (I am initially before sampleDiv3)</div>
+<div id="sampleDiv3" class="sampleDivClass green">I am a div with id 'sampleDiv3' and class 'sampleDivClass'</div>
+
+
+
+

@@ -1,0 +1,72 @@
+#{extends 'main.html' /}
+#{set tab:'jQueryDeferred' /}
+
+#{box 
+	id:'deferred1',
+	next:'deferred2',
+	title:'jQuery Deferred - Multiple Callbacks',
+	jsFile:'jQueryDeferred.js', 
+	links: [
+		"getFirstName('Azzolini');",
+		"getFirstName('Smith');"
+	]
+/}
+
+#{box 
+	id:'deferred2',
+	defaultHidden: true,
+	previous:'deferred1',
+	next:'deferred3',
+	title:'jQuery Deferred - Multiple Requirements',
+	jsFile:'jQueryDeferred2.js', 
+	links: [
+		"getFirstNames('Azzolini', 'Doe');"
+	]
+/}
+
+#{box 
+	id:'deferred3',
+	defaultHidden: true,
+	previous:'deferred2',
+	next:'deferred4',
+	title:'jQuery Deferred - Custom Deferred Object',
+	jsFile:'jQueryDeferred3.js', 
+	links: [
+		"doIt();",
+		"reset();"
+	]
+/}
+
+#{box 
+	id:'deferred4',
+	defaultHidden: true,
+	previous:'deferred3',
+	title:'jQuery Deferred - Practical Example',
+	jsFile:'jQueryDeferred4.js', 
+	links: [
+		"getFirstNameCached('Azzolini');",
+		"getFirstNameCached('Doe');"
+	]
+/}
+
+<script type="text/javascript">
+	function getFirstName3(lastName) {
+	    showLoadingIcon('#sampleDiv1');
+	    $.get('/ajax/getFirstNameSlow', {lastName: lastName}, function(data) {
+	        $('#sampleDiv1').text(data);
+	    })
+	}
+	
+	function showLoadingIcon(element) {
+	    $(element).html('&lt;img src="/public/images/ajax-loader.gif" />');
+	}
+	
+	function reset() {
+		$('#sampleDiv2').html("&nbsp;");
+		$('#sampleDiv2').hide();
+	}
+</script>	
+
+<div id="sampleDiv1" class="sampleDiv blue" style="width: 310px;">&nbsp;</div>
+
+<div id="sampleDiv2" class="sampleDiv green" style="width: 310px; display: none;">&nbsp;</div>

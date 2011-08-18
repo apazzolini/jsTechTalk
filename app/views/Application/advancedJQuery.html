@@ -1,0 +1,34 @@
+#{extends 'main.html' /}
+#{set tab:'advancedJQuery' /}
+
+#{script 'advancedJQuery.js' /}
+#{script 'advancedJQuery2.js' /}
+
+#{box 
+	title:'Binding Functions on Document Ready', 
+	jsFile:'advancedJQuery.js', 
+	links: [
+		"alert(sampleValue1);"
+	]
+/}
+
+#{box 
+	id:'binding1',
+	next:'binding2',
+	title:'Binding Functions to Elements - Version 1',
+	jsFile:'advancedJQuery2.js', 
+	nonevalLinks: [
+		'<a href="http://www.google.com" id="sampleLink1">sampleLink1</a>'
+	]
+/}
+
+#{box 
+	id:'binding2',
+	defaultHidden: true,
+	previous:'binding1',
+	title:'Binding Functions to Elements - Version 2',
+	jsFile:'advancedJQuery4.js', 
+	nonevalLinks: [
+		'<a href="http://www.google.com" id="sampleLink2">sampleLink2</a>'
+	]
+/}

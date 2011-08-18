@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Credera - August Tech Talk - jQuery and Advanced JavaScript</title>
+		
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kreon:300,700">
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    	
+		#{stylesheet 'main.css' /}
+		#{stylesheet 'zenburn.css' /}
+		
+		#{script 'main.js' /}
+		#{script 'highlight.pack.js' /}
+		
+	</head>
+	<body>
+		<div id="navigation">
+			<ul>
+				<li><a href="/" #{if tab == 'index'}class="active" #{/if}>Overview</a> »</li>
+				<li><a href="/basicJavaScript" #{if tab == 'basicJavaScript'}class="active" #{/if}>Basic JavaScript</a> »</li>
+				<li><a href="/basicJQuery" #{if tab == 'basicJQuery'}class="active" #{/if}>Basic jQuery</a> »</li>
+				<li><a href="/advancedJQuery" #{if tab == 'advancedJQuery'}class="active" #{/if}>jQuery binding</a> »</li>
+				<li><a href="/advancedJQuery2" #{if tab == 'advancedJQuery2'}class="active" #{/if}>jQuery find/each</a> »</li>
+				<li><a href="/jQueryAjax" #{if tab == 'jQueryAjax'}class="active" #{/if}>jQuery AJAX</a> »</li>
+				<li><a href="/jQueryDeferred" #{if tab == 'jQueryDeferred'}class="active" #{/if}>jQuery Deferred</a> »</li>
+				<li><a href="/modulePattern" #{if tab == 'modulePattern'}class="active" #{/if}>Module Pattern</a> »</li>
+				<li><a href="/currying" #{if tab == 'currying'}class="active" #{/if}>Currying</a> »</li>
+			</ul>
+		</div>
+		
+		<div id="contentBackground">
+		</div>
+		
+		<div id="contentContainer">
+			<h2>Credera - August Tech Talk - jQuery and Advanced JavaScript</h2>
+			
+        	#{doLayout /}
+		</div>
+		
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+	</body>
+</html>

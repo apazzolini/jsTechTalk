@@ -1,0 +1,32 @@
+#{extends 'main.html' /}
+#{set tab:'advancedJQuery2' /}
+
+#{box 
+	title:'jQuery .find()', 
+	jsFile:'advancedJQuery5.js', 
+	links: [
+		"changeDivColor('yellow');",
+		"changeDivColor('#AFD095');"
+	]
+/}
+
+
+<div id="sampleDiv1" class="sampleDiv blue">
+	<div id="sampleDiv2" class="inline green">Sample 1</div>
+	<div id="sampleDiv3" class="inline green">Sample 2</div>
+	<div id="sampleDiv4" class="inline green">Sample 3</div>
+</div>
+
+#{box 
+	title:'jQuery .each()', 
+	jsFile:'advancedJQuery6.js', 
+	links: [
+		"squareNumbers();"
+	]
+/}
+
+<div id="sampleDiv5" class="sampleDiv blue">
+	<div id="sampleDiv6" class="inline green">1</div>
+	<div id="sampleDiv7" class="inline green">2</div>
+	<div id="sampleDiv8" class="inline green">3</div>
+</div>

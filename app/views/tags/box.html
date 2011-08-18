@@ -1,0 +1,50 @@
+#{if _jsFile != null}
+	#{script _jsFile /}
+#{/if}
+
+<div class="contentInternal" #{if _id != null}id="${_id}"#{/if} #{if _defaultHidden}style="display: none;"#{/if}>
+#{if _next || _previous}
+	<span class="nextVersionLink">
+		#{if _previous}
+			<a href="#" onclick="javascript: fadeReplace('#${_id}', '#${_previous}'); return false;">Previous</a>
+		#{/if}
+		#{if _previous && _next}
+			|
+		#{/if}
+		#{if _next}
+			<a href="#" onclick="javascript: fadeReplace('#${_id}', '#${_next}'); return false;">Next</a>
+		#{/if}
+	</span>
+#{/if}
+	
+	<h3>${_title}</h3>
+	
+#{if _links || _nonevalLinks}
+#{if _jsFile}
+	<pre class="code"><code>
+#{include '/public/javascripts/' + _jsFile /}
+	</code></pre> 
+#{/if} 
+	<pre style="margin-top: -10px">
+#{list items:_links, as:'link'}
+
+<a href="javascript:;" onclick="javascript: eval($(this).html());">${link}</a>
+#{/list}
+#{list items:_nonevalLinks, as:'link'}
+
+${link.raw()}
+#{/list}
+	</pre>
+#{/if}
+	
+#{if _notes}
+	<ul>
+		#{list items:_notes, as:'note'}
+			<li>
+				${note}
+			</li>
+		#{/list}
+	</ul>
+#{/if}
+
+</div>

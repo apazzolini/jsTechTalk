@@ -1,0 +1,49 @@
+#{extends 'main.html' /}
+#{set tab:'jQueryAjax' /}
+
+#{box 
+	id:'ajax1',
+	next:'ajax2',
+	title:'jQuery AJAX Response - Version 1',
+	jsFile:'jQueryAjax.js', 
+	links: [
+		"getFirstName('Azzolini');",
+		"getFirstName('Doe');",
+		"getFirstName('Smith');"
+	]
+/}
+
+#{box 
+	id:'ajax2',
+	defaultHidden: true,
+	previous:'ajax1',
+	next:'ajax3',
+	title:'jQuery AJAX Response - Version 2',
+	jsFile:'jQueryAjax2.js', 
+	links: [
+		"getFirstName2('Azzolini');",
+		"getFirstName2('Doe');",
+		"getFirstName2('Smith');"
+	]
+/}
+
+#{box 
+	id:'ajax3',
+	defaultHidden: true,
+	previous:'ajax2',
+	title:'jQuery AJAX Response - Version 3',
+	jsFile:'jQueryAjax3.js', 
+	links: [
+		"getFirstName3('Azzolini');",
+		"getFirstName3('Doe');",
+		"getFirstName3('Smith');"
+	]
+/}
+
+<script type="text/javascript">
+function showLoadingIcon(element) {
+	$(element).html('<img src="/public/images/ajax-loader.gif" />');
+}	
+</script>	
+
+<div id="sampleDiv1" class="sampleDiv blue" style="width: 310px;">&nbsp;</div>

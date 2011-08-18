@@ -1,0 +1,49 @@
+#{extends 'main.html' /}
+#{set tab:'currying' /}
+
+#{box 
+	id:'currying1',
+	defaultHidden: false,
+	next:'currying2',
+	title:'Currying - The curry function',
+	jsFile:'currying1.js', 
+	links: [
+		""
+	]
+/}
+
+#{box 
+	id:'currying2',
+	defaultHidden: true,
+	previous:'currying1',
+	next:'prototype',
+	title:'Currying - Simple Example',
+	jsFile:'currying2.js', 
+	links: [
+		"alert(addTen(20));"
+	]
+/}
+
+#{box 
+	id:'prototype',
+	defaultHidden: true,
+	previous:'currying2',
+	next:'currying3',
+	title:'Bonus - Prototypes!',
+	jsFile:'currying4.js', 
+	links: [
+		"truck.drive();",
+		"truck.stopDriving();"
+	]
+/}
+
+#{box 
+	id:'currying3',
+	defaultHidden: true,
+	previous:'prototype',
+	title:'Currying - Bonus Prototype example!',
+	jsFile:'currying3.js', 
+	links: [
+		"annoyingAlert('the quick brown fox');"
+	]
+/}

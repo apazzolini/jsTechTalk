@@ -1,0 +1,54 @@
+#{extends 'main.html' /}
+#{set tab:'modulePattern' /}
+
+#{box 
+	id:'module1',
+	defaultHidden: false,
+	next:'module2',
+	title:'Stateful Closures',
+	jsFile:'module1.js', 
+	links: [
+		"alert(counter());",
+		"alert(counter2());",
+		"alert(counter.count);"
+	]
+/}
+
+#{box 
+	id:'module2',
+	defaultHidden: true,
+	previous:'module1',
+	next:'module3',
+	title:'Self-Executing Closure',
+	jsFile:'module2.js', 
+	links: [
+		"alert(counter3());"
+	]
+/}
+
+#{box 
+	id:'module3',
+	defaultHidden: true,
+	previous:'module2',
+	next:'module4',
+	title:'Module Pattern',
+	jsFile:'module3.js', 
+	links: [
+		"alert(Counter.countByOne());",
+		"alert(Counter.countByFive());",
+		"alert(Counter.getCount());",
+		"alert(Counter.reset());"
+	]
+/}
+
+#{box 
+	id:'module4',
+	defaultHidden: true,
+	previous:'module3',
+	title:'Module Augmentation',
+	jsFile:'module4.js', 
+	links: [
+		"alert(Counter.countByOne());",
+		"alert(Counter.countBySecret());"
+	]
+/}
