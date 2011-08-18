@@ -1,10 +1,8 @@
 This is a Play! Framework application
 
 To run it:
+  Clone this git repository
 	Download Play! from http://www.playframework.org/download and install (extract) it locally.
-	Eclipsify the project by running 'play eclipsify /path/to/jsTechTalk'
-	Import the project into Eclipse
-	Expand the eclipse folder, right click on techtalk.launch, run as techtalk
-
-Connect to http://localhost:9000 to view it
+  Run "play run /path/to/clonedRepository"
+  Connect to http://localhost:9000 to view it
 	
