@@ -1,8 +1,12 @@
 This is a Play! Framework application
 
-To run it:
+To see it in action:
+  http://pure-moon-2330.herokuapp.com/jQueryAjax
+
+To run it locally:
   Clone this git repository
   Download Play! from http://www.playframework.org/download and install (extract) it locally.
+  In conf/application.conf, change the db information by removing the three uncommented lines and uncommenting db=mem
   Run "play run /path/to/clonedRepository"
   Connect to http://localhost:9000 to view it
 	
