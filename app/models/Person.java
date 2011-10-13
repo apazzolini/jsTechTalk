@@ -12,6 +12,8 @@ public class Person extends Model {
 	public String phoneNumber;
 	public String emailAddress;
 	public Address address;	
+
+	public List<Vehicle> vehicles;
 	
 	public Person() { }
 	public Person(String firstName, String lastName) {
