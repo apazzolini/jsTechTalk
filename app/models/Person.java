@@ -10,6 +10,8 @@ public class Person extends Model {
 	public String firstName;
 	public String lastName;
   public String phoneNumber;
+
+  public List<Vehicle> vehicles;
 	
 	public Person() { }
 	public Person(String firstName, String lastName) {
