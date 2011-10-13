@@ -9,6 +9,7 @@ public class Person extends Model {
 	
 	public String firstName;
 	public String lastName;
+	public String phoneNumber;
 	public String emailAddress;
 	public Address address;	
 	
